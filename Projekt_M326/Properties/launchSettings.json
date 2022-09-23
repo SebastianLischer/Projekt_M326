@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Projekt_M326": {
+      "commandName": "Project"
+    },
+    "newProfile1": {
+      "commandName": "Project"
+    }
+  }
+}
