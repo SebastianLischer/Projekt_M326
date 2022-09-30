@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace Projekt_M326
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for RasterErstellen.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class RasterErstellen : Page
     {
-        public MainWindow()
+        public RasterErstellen()
         {
             InitializeComponent();
-        }
-
-        private void btn_rasterErstellen_page(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new RasterErstellen();
         }
     }
 }

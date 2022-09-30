@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <StackPanel Orientation="Horizontal" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <Button x:Name="btn_rasterErstellen" Content="Raster Erstellen" Click="btn_rasterErstellen_page"/>
+        </StackPanel>
+        <Frame x:Name="Main" Margin="0,30,0,0"/>
     </Grid>
+    
 </Window>
