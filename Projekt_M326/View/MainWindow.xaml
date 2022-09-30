@@ -9,8 +9,9 @@
     <Grid>
         <StackPanel Orientation="Horizontal" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center">
             <Button x:Name="btn_rasterErstellen" Content="Raster Erstellen" Click="btn_rasterErstellen_page"/>
+            <Button x:Name="btn_" Content="Raster Erstellen" Click="btn_rasterErstellen_page"/>
         </StackPanel>
-        <Frame x:Name="Main" Margin="0,30,0,0"/>
+        <Frame x:Name="Main" Margin="0,30,0,0" NavigationUIVisibility="Hidden"/>
     </Grid>
     
 </Window>
