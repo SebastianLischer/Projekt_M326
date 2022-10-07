@@ -11,7 +11,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="View\Images\plus.jpg" />
+    <None Remove="View\Images\view.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="App.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="View\Images\plus.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\Images\view.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

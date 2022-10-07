@@ -5,13 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt_M326"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <StackPanel Orientation="Horizontal" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center">
-            <Button x:Name="btn_rasterErstellen" Content="Raster Erstellen" Click="btn_rasterErstellen_page"/>
-            <Button x:Name="btn_" Content="Raster Erstellen" Click="btn_rasterErstellen_page"/>
-        </StackPanel>
-        <Frame x:Name="Main" Margin="0,30,0,0" NavigationUIVisibility="Hidden"/>
-    </Grid>
-    
+        Height="450" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+    <Border Background="LightBlue" CornerRadius="50">
+        <Grid>
+            <StackPanel Orientation="Horizontal" Height="20" VerticalAlignment="Top" Margin="0,20,0,0" HorizontalAlignment="Center">
+                <Button x:Name="btn_rasterErstellen" Click="btn_rasterErstellen_page">
+                    <Image Source="Images\plus.jpg" Width="17"/>
+                </Button>
+                <Button x:Name="btn_rasterAnschauen" Click="btn_rasterAnschauen_page">
+                    <Image Source="Images\view.png" Width="14"/>
+                </Button>
+            </StackPanel>
+            <Frame x:Name="Main" Margin="0,50,0,0" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2"/>
+        </Grid>
+    </Border>
+
+
 </Window>
