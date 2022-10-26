@@ -11,7 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="View\Images\back-image.jpg" />
+    <None Remove="View\Images\key-icon.png" />
+    <None Remove="View\Images\logo.png" />
     <None Remove="View\Images\plus.jpg" />
+    <None Remove="View\Images\user-icon.png" />
     <None Remove="View\Images\view.png" />
   </ItemGroup>
 
@@ -20,10 +24,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="View\Images\key-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\Images\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="View\Images\plus.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="View\Images\user-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="View\Images\view.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="View\Images\back-image.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
