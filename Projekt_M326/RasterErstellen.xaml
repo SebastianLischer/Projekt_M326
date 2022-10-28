@@ -9,8 +9,33 @@
       Title="RasterErstellen">
 
     <Grid>
-        <StackPanel>
-            <TextBlock Text="Page 2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="1">
+            <TextBlock Text="Raster Erstellen" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <TextBlock>Name</TextBlock>
+            <TextBox Height="Auto"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <TextBlock>Beruf</TextBlock>
+            <ComboBox ItemsSource="{Binding ListOfJobs}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
         </StackPanel>
     </Grid>
 </Page>
