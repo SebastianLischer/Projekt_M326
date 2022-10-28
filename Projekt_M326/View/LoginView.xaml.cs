@@ -10,29 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Projekt_M326
+namespace Projekt_M326.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for LoginView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginView : Window
     {
-        public MainWindow()
+        public LoginView()
         {
             InitializeComponent();
         }
 
-        private void btn_rasterErstellen_page(object sender, RoutedEventArgs e)
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Main.Content = new RasterErstellen();
-        }
-
-        private void btn_rasterAnschauen_page(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new RasterAnschauen();
+            if (e.LeftButton == MouseButtonState.Pressed)
+                DragMove();
         }
 
         private void btnMinimize_Click(object sender, RoutedEventArgs e)
@@ -43,6 +38,11 @@ namespace Projekt_M326
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
