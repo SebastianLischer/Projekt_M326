@@ -23,6 +23,29 @@ namespace Projekt_M326
         public RasterErstellen()
         {
             InitializeComponent();
+            DataContext = new Data();
         }
+    }
+
+    public class Job
+    {
+        public string Name { get; set; }
+
+        public Job(string name)
+        {
+            Name = name;
+        }
+    }
+
+    public class Data
+    {
+        //load list of Jobs from Database
+        public Data()
+        {
+            ListOfJobs = new List<Job>();
+            ListOfJobs.Add(new Job("TestRNA"));
+            ListOfJobs.Add(new Job("Test"));
+        }
+        public List<Job> ListOfJobs { get; set; }
     }
 }
