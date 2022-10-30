@@ -20,6 +20,12 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
+        <Label Grid.Column="1" VerticalAlignment="Center" Foreground="White">Fach</Label>
+        <Label Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Foreground="White">Raster</Label>
+        <ComboBox Height="20" Width="300" Grid.Column="1" Grid.ColumnSpan="2"></ComboBox>
+        <ComboBox Height="20" Width="300" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"></ComboBox>
+        <DataGrid Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="4"></DataGrid>
     </Grid>
 </Page>
