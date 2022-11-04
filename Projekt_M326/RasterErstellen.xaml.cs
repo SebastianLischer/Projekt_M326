@@ -25,6 +25,11 @@ namespace Projekt_M326
             InitializeComponent();
             DataContext = new Data();
         }
+
+        private void btnRasterErstelen(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 
     public class Job
