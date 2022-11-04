@@ -23,6 +23,50 @@ namespace Projekt_M326
         public RasterAnschauen()
         {
             InitializeComponent();
+            comboBoxFach.DataContext = new DataForFach();
+            comboBoxRaster.DataContext = new DataForRaster();
+
         }
     }
+    public class Fach
+    {
+        public string Name { get; set; }
+
+        public Fach(string name)
+        {
+            Name = name;
+        }
+    }
+    public class Raster
+    {
+        public string Name2 { get; set; }
+
+        public Raster(string name2)
+        {
+            Name2 = name2;
+        }
+    }
+    public class DataForFach
+    {
+        //load list of Fach from Database
+        public DataForFach()
+        {
+            ListOfFach = new List<Fach>();
+            ListOfFach.Add(new Fach("TestFAch"));
+            ListOfFach.Add(new Fach("TestFach2"));
+        }
+        public List<Fach> ListOfFach { get; set; }
+    }
+    public class DataForRaster
+    {
+        //load list of Raster from Database
+        public DataForRaster()
+        {
+            ListOfRaster = new List<Raster>();
+            ListOfRaster.Add(new Raster("Raster"));
+            ListOfRaster.Add(new Raster("Raster2"));
+        }
+        public List<Raster> ListOfRaster { get; set; }
+    }
+    
 }

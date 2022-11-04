@@ -24,8 +24,20 @@
         </Grid.RowDefinitions>
         <Label Grid.Column="1" VerticalAlignment="Center" Foreground="White">Fach</Label>
         <Label Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Foreground="White">Raster</Label>
-        <ComboBox Height="20" Width="300" Grid.Column="1" Grid.ColumnSpan="2"></ComboBox>
-        <ComboBox Height="20" Width="300" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"></ComboBox>
+        <ComboBox x:Name="comboBoxFach" Height="20" Width="300" Grid.Column="1" Grid.ColumnSpan="2" ItemsSource="{Binding ListOfFach}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox x:Name="comboBoxRaster" Height="20" Width="300" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{Binding ListOfRaster}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name2}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
         <DataGrid Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="4"></DataGrid>
     </Grid>
 </Page>
