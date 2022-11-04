@@ -20,21 +20,24 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="1">
-            <TextBlock Text="Raster Erstellen" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+            <TextBlock Foreground="White" TextAlignment="Center" FontFamily="Montserrat" Text="Raster Erstellen" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
         </StackPanel>
         <StackPanel Grid.Row="1">
-            <TextBlock>Name</TextBlock>
-            <TextBox Height="Auto"></TextBox>
+            <TextBlock Foreground="White" TextAlignment="Center" FontFamily="Montserrat">Name</TextBlock>
+            <TextBox x:Name="RasterName" Width="200" Height="Auto"></TextBox>
         </StackPanel>
         <StackPanel Grid.Row="2">
-            <TextBlock>Beruf</TextBlock>
-            <ComboBox ItemsSource="{Binding ListOfJobs}">
+            <TextBlock Foreground="White" TextAlignment="Center" FontFamily="Montserrat">Beruf</TextBlock>
+            <ComboBox Width="200" ItemsSource="{Binding ListOfJobs}">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding Name}"/>
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
+        </StackPanel>
+        <StackPanel Width="100" VerticalAlignment="Center" Grid.Row="3">
+            <Button Click="btnRasterErstelen">Raster Erstellen</Button>
         </StackPanel>
     </Grid>
 </Page>
