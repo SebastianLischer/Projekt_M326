@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projekt_M326.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,15 @@ namespace Projekt_M326
         private void btn_rasterErstellen_page(object sender, RoutedEventArgs e)
         {
             Main.Content = new RasterErstellen();
+
+
+            //using (var ctx = new M326Db())
+            //{
+            //    var stud = new User() { FirstName = "Bill" };
+
+            //    ctx.Users.Add(stud);
+            //    ctx.SaveChanges();
+            //}
         }
     }
 }
