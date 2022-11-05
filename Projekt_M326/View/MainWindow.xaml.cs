@@ -1,4 +1,5 @@
-﻿using Projekt_M326.Model;
+﻿//using Projekt_M326.Model;
+using Projekt_M326.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,20 +25,20 @@ namespace Projekt_M326
         public MainWindow()
         {
             InitializeComponent();
+
+            //using (var ctx = new DatabaseContext())
+            //{
+            //    var stud = new User() { UserFirstName = "Bill", UserLastName = "test" };
+
+            //    ctx.Users.Add(stud);
+            //    ctx.SaveChanges();
+            //}
         }
 
         private void btn_rasterErstellen_page(object sender, RoutedEventArgs e)
         {
             Main.Content = new RasterErstellen();
 
-
-            //using (var ctx = new M326Db())
-            //{
-            //    var stud = new User() { FirstName = "Bill" };
-
-            //    ctx.Users.Add(stud);
-            //    ctx.SaveChanges();
-            //}
         }
 
         private void btn_rasterAnschauen_page(object sender, RoutedEventArgs e)
