@@ -17,5 +17,7 @@ namespace Projekt_M326.Model
         public DbSet<User> Users { get; set; }
         public DbSet<Job> Jobs { get; set; }
         public DbSet<Competence> Competences { get; set; }
+        public DbSet<CompetenceGrid> CompetenceGrids { get; set; }
+        public DbSet<CompetenceGridCompentence> CompetenceGridCompetences { get; set; }
         }
 }

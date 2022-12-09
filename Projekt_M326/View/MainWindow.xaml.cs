@@ -26,13 +26,13 @@ namespace Projekt_M326
         {
             InitializeComponent();
 
-            //using (var ctx = new DatabaseContext())
-            //{
-            //    var stud = new User() { UserFirstName = "Bill", UserLastName = "test" };
+            using (var ctx = new DatabaseContext())
+            {
+                var stud = new User() { UserFirstName = "Bill", UserLastName = "test" };
 
-            //    ctx.Users.Add(stud);
-            //    ctx.SaveChanges();
-            //}
+                ctx.Users.Add(stud);
+                ctx.SaveChanges();
+            }
         }
 
         private void btn_rasterErstellen_page(object sender, RoutedEventArgs e)
