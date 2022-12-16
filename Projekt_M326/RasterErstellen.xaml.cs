@@ -92,13 +92,11 @@ namespace Projekt_M326
         private void KompetenzErstellen(object sender, RoutedEventArgs e)
         {
             main.CreateCompetence();
-           
         }
     }
 
     public class Data
     {
-        //load list of Jobs from Database
         public Data()
         {
             using (DatabaseContext db = new DatabaseContext())

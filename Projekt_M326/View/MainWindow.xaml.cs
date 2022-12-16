@@ -44,7 +44,7 @@ namespace Projekt_M326
 
         private void btn_rasterAnschauen_page(object sender, RoutedEventArgs e)
         {
-            Main.Content = new RasterAnschauen();
+            Main.Content = new RasterAnschauen(this);
         }
 
         private void btnMinimize_Click(object sender, RoutedEventArgs e)
@@ -64,6 +64,10 @@ namespace Projekt_M326
         public void CreateGrid()
         {
             Main.Content = new RasterErstellen(this);
+        }
+        public void ShowCompetence(CompetenceGrid grid)
+        {
+            Main.Content = new KompetenzenAnschauen(grid);
         }
     }
 }

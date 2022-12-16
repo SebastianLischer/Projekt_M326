@@ -1,5 +1,9 @@
-﻿using System;
+﻿using Projekt_M326.Model;
+using Projekt_M326.View;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,53 +24,46 @@ namespace Projekt_M326
     /// </summary>
     public partial class RasterAnschauen : Page
     {
-        public RasterAnschauen()
+        MainWindow main;
+        public RasterAnschauen(MainWindow window)
         {
+            main = window;
             InitializeComponent();
-            comboBoxFach.DataContext = new DataForFach();
-            comboBoxRaster.DataContext = new DataForRaster();
+            comboBoxRaster.DataContext = new Data2();
+        }
 
-        }
-    }
-    public class Fach
-    {
-        public string Name { get; set; }
+        private void RasterLaden(object sender, RoutedEventArgs e)
+        {
+            if(comboBoxRaster.SelectedItem == null)
+            {
+                FehlerMeldung.Text = "Sie müssen zuerst ein Raster auswählen";
+            }
+            else
+            {
+                FehlerMeldung.Text = "";
+                using (DatabaseContext db = new DatabaseContext())
+                {
+                    CompetenceGrid grid = db.CompetenceGrids
+                        .Include(x => x.Job)
+                        .FirstOrDefault(b => b.Name == ((CompetenceGrid)comboBoxRaster.SelectedItem).Name);
 
-        public Fach(string name)
-        {
-            Name = name;
+                    main.ShowCompetence(grid);
+                }
+            }
         }
+       
     }
-    public class Raster
-    {
-        public string Name2 { get; set; }
 
-        public Raster(string name2)
-        {
-            Name2 = name2;
-        }
-    }
-    public class DataForFach
+    public class Data2
     {
-        //load list of Fach from Database
-        public DataForFach()
+        public Data2()
         {
-            ListOfFach = new List<Fach>();
-            ListOfFach.Add(new Fach("TestFAch"));
-            ListOfFach.Add(new Fach("TestFach2"));
+            using (DatabaseContext db = new DatabaseContext())
+            {
+                ListOfGrids = db.CompetenceGrids.ToList<CompetenceGrid>();
+            }
         }
-        public List<Fach> ListOfFach { get; set; }
+        public List<CompetenceGrid> ListOfGrids { get; set; }
     }
-    public class DataForRaster
-    {
-        //load list of Raster from Database
-        public DataForRaster()
-        {
-            ListOfRaster = new List<Raster>();
-            ListOfRaster.Add(new Raster("Raster"));
-            ListOfRaster.Add(new Raster("Raster2"));
-        }
-        public List<Raster> ListOfRaster { get; set; }
-    }
-    
+
 }
