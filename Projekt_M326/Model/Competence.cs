@@ -9,6 +9,7 @@ namespace Projekt_M326.Model
     public class Competence
     {
         public int CompetenceId { get; set; }
+        public string CompetenceName { get; set; }
         public string CompetenceString { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿//using Projekt_M326.Model;
 using Projekt_M326.Model;
+using Projekt_M326.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,7 +38,7 @@ namespace Projekt_M326
 
         private void btn_rasterErstellen_page(object sender, RoutedEventArgs e)
         {
-            Main.Content = new RasterErstellen();
+            Main.Content = new RasterErstellen(this);
 
         }
 
@@ -54,6 +55,15 @@ namespace Projekt_M326
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        public void CreateCompetence()
+        {
+            Main.Content = new KompetenzErstellen(this);
+        }
+        public void CreateGrid()
+        {
+            Main.Content = new RasterErstellen(this);
         }
     }
 }

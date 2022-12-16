@@ -1,4 +1,5 @@
 ﻿using Projekt_M326.Model;
+using Projekt_M326.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,8 +22,10 @@ namespace Projekt_M326
     /// </summary>
     public partial class RasterErstellen : Page
     {
-        public RasterErstellen()
+        MainWindow main;
+        public RasterErstellen(MainWindow window)
         {
+            main = window;
             InitializeComponent();
             DataContext = new Data();
         }
@@ -84,6 +87,12 @@ namespace Projekt_M326
                 CompetenceListBox.SelectedItem = null;
                 ErrorTextBlock.Text = "Raster wurde erfolgreich erstellt.";
             }
+        }
+
+        private void KompetenzErstellen(object sender, RoutedEventArgs e)
+        {
+            main.CreateCompetence();
+           
         }
     }
 
